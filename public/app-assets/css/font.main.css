@@ -1,0 +1,10 @@
+@font-face {
+    font-family: bahij2;
+    src:url(./font.main.css);
+   
+  }
+
+  *{
+    font-family:bahij2;
+}
+  
