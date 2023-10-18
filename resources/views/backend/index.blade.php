@@ -1,5 +1,30 @@
 @extends('backend.layout.main')
 @section('title', 'Library')
+@section('vender-css')
+<!-- BEGIN: Vendor CSS-->
+    @yield('vender-css')
+    <link rel="stylesheet" type="text/css" href="{{asset('app-assets/vendors/css/vendors-rtl.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('app-assets/vendors/css/charts/apexcharts.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('app-assets/vendors/css/extensions/toastr.min.css')}}">
+<!-- END: Vendor CSS-->
+@endsection
+
+<!-- BEGIN: Page CSS-->
+@section('page-css')
+    <link rel="stylesheet" type="text/css" href="{{asset('app-assets/css-rtl/core/menu/menu-types/vertical-menu.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('app-assets/css-rtl/pages/dashboard-ecommerce.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('app-assets/css-rtl/plugins/charts/chart-apex.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('app-assets/css-rtl/plugins/extensions/ext-component-toastr.css')}}">
+@endsection
+<!-- END: Page CSS-->
+
+<!-- BEGIN: Custom CSS-->
+@section('custom-css')
+    <link rel="stylesheet" type="text/css" href="{{asset('app-assets/css-rtl/custom-rtl.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/style-rtl.css')}}">
+@endsection
+<!-- END: Custom CSS-->
+
 @section('main-content')
   <!-- BEGIN: Content-->
   <div class="app-content content ">
@@ -22,7 +47,7 @@
                                     <a href="javascript:void(0);">$48.9k</a>
                                 </h3>
                                 <button type="button" class="btn btn-primary">View Sales</button>
-                                <img src="../../../app-assets/images/illustration/badge.svg" class="congratulation-medal" alt="Medal Pic" />
+                                <img src="{{asset('app-assets/images/illustration/badge.svg')}}" class="congratulation-medal" alt="Medal Pic" />
                             </div>
                         </div>
                     </div>
@@ -216,7 +241,7 @@
                                                     <div class="d-flex align-items-center">
                                                         <div class="avatar rounded">
                                                             <div class="avatar-content">
-                                                                <img src="../../../app-assets/images/icons/toolbox.svg" alt="Toolbar svg" />
+                                                                <img src="{{asset('app-assets/images/icons/toolbox.svg')}}" alt="Toolbar svg" />
                                                             </div>
                                                         </div>
                                                         <div>
@@ -254,7 +279,7 @@
                                                     <div class="d-flex align-items-center">
                                                         <div class="avatar rounded">
                                                             <div class="avatar-content">
-                                                                <img src="../../../app-assets/images/icons/parachute.svg" alt="Parachute svg" />
+                                                                <img src="{{asset('app-assets/images/icons/parachute.svg')}}" alt="Parachute svg" />
                                                             </div>
                                                         </div>
                                                         <div>
@@ -292,7 +317,7 @@
                                                     <div class="d-flex align-items-center">
                                                         <div class="avatar rounded">
                                                             <div class="avatar-content">
-                                                                <img src="../../../app-assets/images/icons/brush.svg" alt="Brush svg" />
+                                                                <img src="{{asset('app-assets/images/icons/brush.svg')}}" alt="Brush svg" />
                                                             </div>
                                                         </div>
                                                         <div>
@@ -330,7 +355,7 @@
                                                     <div class="d-flex align-items-center">
                                                         <div class="avatar rounded">
                                                             <div class="avatar-content">
-                                                                <img src="../../../app-assets/images/icons/star.svg" alt="Star svg" />
+                                                                <img src="{{asset('app-assets/images/icons/star.svg')}}" alt="Star svg" />
                                                             </div>
                                                         </div>
                                                         <div>
@@ -368,7 +393,7 @@
                                                     <div class="d-flex align-items-center">
                                                         <div class="avatar rounded">
                                                             <div class="avatar-content">
-                                                                <img src="../../../app-assets/images/icons/book.svg" alt="Book svg" />
+                                                                <img src="{{asset('app-assets/images/icons/book.svg')}}" alt="Book svg" />
                                                             </div>
                                                         </div>
                                                         <div>
@@ -406,7 +431,7 @@
                                                     <div class="d-flex align-items-center">
                                                         <div class="avatar rounded">
                                                             <div class="avatar-content">
-                                                                <img src="../../../app-assets/images/icons/rocket.svg" alt="Rocket svg" />
+                                                                <img src="{{asset('app-assets/images/icons/rocket.svg')}}" alt="Rocket svg" />
                                                             </div>
                                                         </div>
                                                         <div>
@@ -444,7 +469,7 @@
                                                     <div class="d-flex align-items-center">
                                                         <div class="avatar rounded">
                                                             <div class="avatar-content">
-                                                                <img src="../../../app-assets/images/icons/speaker.svg" alt="Speaker svg" />
+                                                                <img src="{{asset('app-assets/images/icons/speaker.svg')}}" alt="Speaker svg" />
                                                             </div>
                                                         </div>
                                                         <div>
@@ -489,7 +514,7 @@
                     <div class="col-lg-4 col-md-6 col-12">
                         <div class="card card-developer-meetup">
                             <div class="meetup-img-wrapper rounded-top text-center">
-                                <img src="../../../app-assets/images/illustration/email.svg" alt="Meeting Pic" height="170" />
+                                <img src="{{asset('app-assets/images/illustration/email.svg')}}" alt="Meeting Pic" height="170" />
                             </div>
                             <div class="card-body">
                                 <div class="meetup-header d-flex align-items-center">
@@ -526,19 +551,19 @@
                                 </div>
                                 <div class="avatar-group">
                                     <div data-toggle="tooltip" data-popup="tooltip-custom" data-placement="bottom" data-original-title="Billy Hopkins" class="avatar pull-up">
-                                        <img src="../../../app-assets/images/portrait/small/avatar-s-9.jpg" alt="Avatar" width="33" height="33" />
+                                        <img src="{{asset('app-assets/images/portrait/small/avatar-s-9.jpg')}}" alt="Avatar" width="33" height="33" />
                                     </div>
                                     <div data-toggle="tooltip" data-popup="tooltip-custom" data-placement="bottom" data-original-title="Amy Carson" class="avatar pull-up">
-                                        <img src="../../../app-assets/images/portrait/small/avatar-s-6.jpg" alt="Avatar" width="33" height="33" />
+                                        <img src="{{asset('app-assets/images/portrait/small/avatar-s-6.jpg')}}" alt="Avatar" width="33" height="33" />
                                     </div>
                                     <div data-toggle="tooltip" data-popup="tooltip-custom" data-placement="bottom" data-original-title="Brandon Miles" class="avatar pull-up">
-                                        <img src="../../../app-assets/images/portrait/small/avatar-s-8.jpg" alt="Avatar" width="33" height="33" />
+                                        <img src="{{asset('app-assets/images/portrait/small/avatar-s-8.jpg')}}" alt="Avatar" width="33" height="33" />
                                     </div>
                                     <div data-toggle="tooltip" data-popup="tooltip-custom" data-placement="bottom" data-original-title="Daisy Weber" class="avatar pull-up">
-                                        <img src="../../../app-assets/images/portrait/small/avatar-s-20.jpg" alt="Avatar" width="33" height="33" />
+                                        <img src="{{asset('app-assets/images/portrait/small/avatar-s-20.jpg')}}" alt="Avatar" width="33" height="33" />
                                     </div>
                                     <div data-toggle="tooltip" data-popup="tooltip-custom" data-placement="bottom" data-original-title="Jenny Looper" class="avatar pull-up">
-                                        <img src="../../../app-assets/images/portrait/small/avatar-s-20.jpg" alt="Avatar" width="33" height="33" />
+                                        <img src="{{asset('app-assets/images/portrait/small/avatar-s-20.jpg')}}" alt="Avatar" width="33" height="33" />
                                     </div>
                                     <h6 class="align-self-center cursor-pointer ml-50 mb-0">+42</h6>
                                 </div>
@@ -567,7 +592,7 @@
                             <div class="card-body">
                                 <div class="browser-states">
                                     <div class="media">
-                                        <img src="../../../app-assets/images/icons/google-chrome.png" class="rounded mr-1" height="30" alt="Google Chrome" />
+                                        <img src="{{asset('app-assets/images/icons/google-chrome.png')}}" class="rounded mr-1" height="30" alt="Google Chrome" />
                                         <h6 class="align-self-center mb-0">Google Chrome</h6>
                                     </div>
                                     <div class="d-flex align-items-center">
@@ -577,7 +602,7 @@
                                 </div>
                                 <div class="browser-states">
                                     <div class="media">
-                                        <img src="../../../app-assets/images/icons/mozila-firefox.png" class="rounded mr-1" height="30" alt="Mozila Firefox" />
+                                        <img src="{{asset('app-assets/images/icons/mozila-firefox.png')}}" class="rounded mr-1" height="30" alt="Mozila Firefox" />
                                         <h6 class="align-self-center mb-0">Mozila Firefox</h6>
                                     </div>
                                     <div class="d-flex align-items-center">
@@ -587,7 +612,7 @@
                                 </div>
                                 <div class="browser-states">
                                     <div class="media">
-                                        <img src="../../../app-assets/images/icons/apple-safari.png" class="rounded mr-1" height="30" alt="Apple Safari" />
+                                        <img src="{{asset('app-assets/images/icons/apple-safari.png')}}" class="rounded mr-1" height="30" alt="Apple Safari" />
                                         <h6 class="align-self-center mb-0">Apple Safari</h6>
                                     </div>
                                     <div class="d-flex align-items-center">
@@ -597,7 +622,7 @@
                                 </div>
                                 <div class="browser-states">
                                     <div class="media">
-                                        <img src="../../../app-assets/images/icons/internet-explorer.png" class="rounded mr-1" height="30" alt="Internet Explorer" />
+                                        <img src="{{asset('app-assets/images/icons/internet-explorer.png')}}" class="rounded mr-1" height="30" alt="Internet Explorer" />
                                         <h6 class="align-self-center mb-0">Internet Explorer</h6>
                                     </div>
                                     <div class="d-flex align-items-center">
@@ -607,7 +632,7 @@
                                 </div>
                                 <div class="browser-states">
                                     <div class="media">
-                                        <img src="../../../app-assets/images/icons/opera.png" class="rounded mr-1" height="30" alt="Opera Mini" />
+                                        <img src="{{asset('app-assets/images/icons/opera.png')}}" class="rounded mr-1" height="30" alt="Opera Mini" />
                                         <h6 class="align-self-center mb-0">Opera Mini</h6>
                                     </div>
                                     <div class="d-flex align-items-center">
@@ -741,5 +766,19 @@
     </div>
 </div>
 <!-- END: Content-->
+
+@endsection
+@section('page-js')
+
+
+    <!-- BEGIN: Page Vendor JS-->
+    <script src="{{asset('app-assets/vendors/js/charts/apexcharts.min.js')}}"></script>
+    <script src="{{asset('app-assets/vendors/js/extensions/toastr.min.js')}}"></script>
+    <!-- END: Page Vendor JS-->
+
+
+    <!-- BEGIN: Page JS-->
+    <script src="{{asset('app-assets/js/scripts/pages/dashboard-ecommerce.js')}}"></script>
+    <!-- END: Page JS-->
 
 @endsection

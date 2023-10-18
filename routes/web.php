@@ -20,3 +20,11 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return view('backend.index');
 })->name('dashboard');
+
+Route::get('/data', function () {
+    return view('backend.magazines.magazines-list');
+})->name('data');
+
+Route::get('/datatable', function () {
+    return view('backend.books.books-list');
+})->name('books');
