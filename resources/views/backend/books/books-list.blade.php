@@ -77,98 +77,129 @@
                     </div>
                 </div>
             </div>
-            <div class="demo-inline-spacing">
-                <div class="form-modal-ex">
-                    <!--Insert Modal -->
-                    <div class="modal fade text-left" id="insertForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel33" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h4 class="modal-title" id="myModalLabel33">Add new Book Details</h4>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <form action="{{route('addbook')}}" method="POST">
-                                    @csrf
-                                    <div class="modal-body">
+
+        {{-- Start of insert book modal --}}
+            <div class="modal fade text-left" id="insertForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel17" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel17">Add new Book</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <form action="{{route('addbook')}}" method="POST">
+                            @csrf
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-sm-6">
                                         <label>Name: </label>
                                         <div class="form-group">
                                             <input type="text" name="name" placeholder="Book Name" class="form-control" @required(true) minlength="4"/>
                                         </div>
-
+                                    </div>
+                                    <div class="col-sm-6">
                                         <label>Author: </label>
                                         <div class="form-group">
                                             <input type="text" name="author" placeholder="Author Name" class="form-control" @required(true) minlength="4"/>
                                         </div>
-
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
                                         <label>Date: </label>
                                         <div class="form-group">
                                             <input type="date" name="date" placeholder="" class="form-control" @required(true) />
                                         </div>
-
+                                    </div>
+                                    <div class="col-sm-6">
                                         <label>Salary: </label>
                                         <div class="form-group">
                                             <input type="text" name="salary" placeholder="$40000...." class="form-control" @required(true) />
                                         </div>
                                     </div>
-                                    <div class="modal-footer">
-                                        <button type="submit" class="btn btn-primary">Save</button>
-                                        <button type="reset" class="btn btn-primary">Reset</button>
+                                </div> 
+                                <div class="row">
+                                    <legend class="col-12">Personalia:</legend>
+                                    <div class="col-sm-6">
+                                        <label>Salary: </label>
+                                        <div class="form-group">
+                                            <input type="text" name="salary" placeholder="$40000...." class="form-control" @required(true) />
+                                        </div>
                                     </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    {{-- End Of Insert Model --}}
-
-                    {{-- Edit Model --}}
-                    <div class="modal fade text-left" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel33" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h4 class="modal-title" id="myModalLabel33">Edit & Update Book Details</h4>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
+                                    <div class="col-sm-6">
+                                        <label>Salary: </label>
+                                        <div class="form-group">
+                                            <input type="text" name="salary" placeholder="$40000...." class="form-control" @required(true) />
+                                        </div>
+                                    </div>
                                 </div>
-                                <form action="{{route('updatebook')}}" method="POST">
-                                    @csrf
-                                    @method('PUT')
-                                    <input type="hidden" name="book_id" id="book_id">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-primary">Save</button>
+                                <button type="reset" class="btn btn-primary">Reset</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>  
+        {{-- End of insert book modal --}}
 
-                                    <div class="modal-body">
+        {{-- Start of Edit book modal --}}
+            <div class="modal fade text-left" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel17" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel17">Edit & Updat Book</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <form action="{{route('updatebook')}}" method="POST">
+                            @csrf
+                            @method('PUT')
+                            <input type="hidden" name="book_id" id="book_id">
+
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-sm-6">
                                         <label>Name: </label>
                                         <div class="form-group">
                                             <input type="text" name="name" id="name" placeholder="Book Name" class="form-control" @required(true) minlength="4" />
                                         </div>
-
+                                    </div>
+                                    <div class="col-sm-6">
                                         <label>Author: </label>
                                         <div class="form-group">
                                             <input type="text" name="author" id="author" placeholder="Author Name" class="form-control" @required(true) minlength="4"/>
                                         </div>
-
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
                                         <label>Date: </label>
                                         <div class="form-group">
                                             <input type="date" name="date" id="date" placeholder="" class="form-control" @required(true) />
                                         </div>
-
+                                    </div>
+                                    <div class="col-sm-6">
                                         <label>Salary: </label>
                                         <div class="form-group">
                                             <input type="text" name="salary" id="salary" placeholder="$40000...." class="form-control" @required(true) />
                                         </div>
                                     </div>
-                                    <div class="modal-footer">
-                                        <button type="submit" class="btn btn-primary">Update</button>
-                                        <button type="reset" class="btn btn-primary">Reset</button>
-                                    </div>
-                                </form>
+                                </div>
                             </div>
-                        </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-primary">Update</button>
+                                <button type="reset" class="btn btn-primary">Reset</button>
+                            </div>
+                        </form>
                     </div>
-                    {{-- End Of Edit Model --}}
                 </div>
-            </div>
+            </div>  
+        {{-- End of Edit book modal --}}
+
             <div class="content-body">
                 <!--/ Basic table -->
                 <x-sweetalert  />

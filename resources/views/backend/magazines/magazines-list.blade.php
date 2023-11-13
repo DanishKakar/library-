@@ -49,7 +49,7 @@
                     <div class="form-group breadcrumb-right">
                         <div class="dropdown">
                             <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#insertForm">
-                                Add New Book
+                                Add New Magazine
                             </button>
                         </div>
                     </div>
@@ -327,6 +327,10 @@
             });
         });
     });
+
+    function showModal() {
+        $('#insertForm').modal('show');
+    }
     
 </script>
 

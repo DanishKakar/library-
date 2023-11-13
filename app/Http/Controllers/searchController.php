@@ -86,4 +86,8 @@ class searchController extends Controller
         // return response($output);
     }
 
+    public function create() {
+        return view('backend.magazines.add-magazine');
+    }
+
 }
