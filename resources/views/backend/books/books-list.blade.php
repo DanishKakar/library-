@@ -77,6 +77,7 @@
                     </div>
                 </div>
             </div>
+<<<<<<< HEAD
 
         {{-- Start of insert book modal --}}
             <div class="modal fade text-left" id="insertForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel17" aria-hidden="true">
@@ -93,6 +94,23 @@
                             <div class="modal-body">
                                 <div class="row">
                                     <div class="col-sm-6">
+=======
+            {{-- <div class="demo-inline-spacing">
+                <div class="form-modal-ex">
+                    <!--Insert Modal -->
+                    <div class="modal fade text-left" id="insertForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel33" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title" id="myModalLabel33">Add new Book Details</h4>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <form action="{{route('addbook')}}" method="POST">
+                                    @csrf
+                                    <div class="modal-body">
+>>>>>>> 4ab53fcad50846e4c8d12d3ac2c2e22d8c442c73
                                         <label>Name: </label>
                                         <div class="form-group">
                                             <input type="text" name="name" placeholder="Book Name" class="form-control" @required(true) minlength="4"/>
@@ -196,10 +214,16 @@
                             </div>
                         </form>
                     </div>
+<<<<<<< HEAD
                 </div>
             </div>  
         {{-- End of Edit book modal --}}
 
+=======
+                    {{-- End Of Edit Model --}}
+                {{-- </div> --}}
+            {{-- </div> --}}
+>>>>>>> 4ab53fcad50846e4c8d12d3ac2c2e22d8c442c73
             <div class="content-body">
                 <!--/ Basic table -->
                 <x-sweetalert  />
@@ -208,7 +232,7 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">Magazines Table</h4>
+                                <h4 class="card-title">Books Table</h4>
                                 <div class="col-5 col-md-5">
                                     <form action="{{route('searchbook')}}" method="GET">
                                         <div class="input-group-prepend">
