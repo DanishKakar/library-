@@ -77,7 +77,7 @@
                     </div>
                 </div>
             </div>
-            <div class="demo-inline-spacing">
+            {{-- <div class="demo-inline-spacing">
                 <div class="form-modal-ex">
                     <!--Insert Modal -->
                     <div class="modal fade text-left" id="insertForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel33" aria-hidden="true">
@@ -167,8 +167,8 @@
                         </div>
                     </div>
                     {{-- End Of Edit Model --}}
-                </div>
-            </div>
+                {{-- </div> --}}
+            {{-- </div> --}}
             <div class="content-body">
                 <!--/ Basic table -->
                 <x-sweetalert  />
@@ -177,7 +177,7 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">Magazines Table</h4>
+                                <h4 class="card-title">Books Table</h4>
                                 <div class="col-5 col-md-5">
                                     <form action="{{route('searchbook')}}" method="GET">
                                         <div class="input-group-prepend">
