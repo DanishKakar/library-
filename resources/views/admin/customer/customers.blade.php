@@ -16,6 +16,7 @@
             <!-- /# row -->
             <section id="main-content">
                 <div class="row">
+                    <h1>Hello Changes</h1>
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="bootstrap-data-table-panel">
